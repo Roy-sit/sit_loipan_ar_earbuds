@@ -11,38 +11,61 @@
 <body>
     <!-- <model-viewer> HTML element -->
     <model-viewer src="model/earbuds_hspot.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1" exposure="0.98" camera-orbit="-164.4deg 103.8deg 2.191m" field-of-view="30deg">
+
         <button class="Hotspot" slot="hotspot-1" data-position="1.1716265981711977m 0.4241332470823146m -0.00445245906883418m" data-normal="-0.4817538003905118m 0m -0.8763066106159985m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Aluminum
+            <div class="HotspotAnnotation">
+                <img src="images/material.png" alt="Aluminum material"/>
+                Aluminum
                 <p>Luxury, copper-plated aluminum, blending lightweight comfort with a warm metallic sheen</p>
             </div>
         </button>
+
+
         <button class="Hotspot" slot="hotspot-4" data-position="1.2153916993660385m 0.13689296401740708m -0.0816964087060955m" data-normal="-0.9870445466849294m -1.2087809974590524e-16m 0.16044644857254498m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Speaker
-                <p>A high-quality speaker for a rich, immersive audio experience</p>
+            <div class="HotspotAnnotation">
+                <img src="images/mic.png" alt="Mic"/>
+                Microphone
+                <p>A high-quality microphone for a clear and immersive audio experience</p>
             </div>
         </button>
+
+
         <button class="Hotspot" slot="hotspot-5" data-position="1.1350577286357555m -0.082297095840839m 0.02376905043491248m" data-normal="-0.07407803340878032m 0.039029762140875834m -0.996488395634146m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Crystal
+            <div class="HotspotAnnotation">
+                <img src="images/crystal.png" alt="Crystal Ball"/>
+                Honeycomb Crystal
                 <p>A touch of elegance and sparkle crystal detail, resembling a masterpiece of jewelry</p>
             </div>
         </button>
+
+
         <button class="Hotspot" slot="hotspot-6" data-position="1.1874191194470907m 0.8448839166921971m -0.08484427956320209m" data-normal="0m -1m 0m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">ChargePoint
+            <div class="HotspotAnnotation">
+                <img src="images/chargepoint.png" alt="Charging Point"/>
+                ChargePoint
                 <p>A fast-charging point, bringing style and efficiency together</p>
             </div>
         </button>
+
+
         <button class="Hotspot" slot="hotspot-3" data-position="1.2892612894208009m 0.6672734060508411m 0.0210305007756032m" data-normal="-0.0005390069015518448m -0.20725358247229383m -0.9782871061319169m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Silicone
+            <div class="HotspotAnnotation">
+                <img src="images/silicone.png" alt="Mic"/>
+                Silicone Ring
                 <p>A silicone ring on the tip edge, ensuring a comfortable, secure, and fall-proof fit</p>
             </div>
         </button>
+
+
         <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
         </div>
         <button slot="ar-button" id="ar-button">View in your space</button>
+
         <div id="ar-prompt">
             <img src="/images/ar_hand_prompt.png" alt="AR prompt">
         </div>
+
     </model-viewer>
     <script src="js/script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
