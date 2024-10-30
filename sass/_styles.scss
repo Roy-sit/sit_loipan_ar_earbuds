@@ -1,1 +1,128 @@
 @import 'variables';
+
+/* General reset */
+:not(:defined) > * {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+model-viewer {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+}
+
+/* Hotspot box */
+.Hotspot {
+  background: white;
+  border-radius: 32px;
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 20px;
+  padding: 8px;
+  position: relative;
+  transition: opacity 0.3s;
+  width: 20px;
+}
+
+.Hotspot:not([data-visible]) {
+  background: transparent;
+  border: 4px solid white;
+  box-shadow: none;
+  height: 28px;
+  pointer-events: none;
+  width: 28px;
+}
+
+.Hotspot:focus {
+  border: 4px solid $secondary-color;
+  height: 28px;
+  outline: none;
+  width: 28px;
+}
+
+.Hotspot > * {
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Hotspot info */
+.HotspotAnnotation {
+  background: white;
+  width: 130px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: $primary-color;
+  
+  font-size: 17px;
+  text-align: left;
+  font-weight: 800;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1em);
+  transform: translateY(-50%);
+  visibility: hidden; /* Hidden initially */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Hover effect for Hotspot */
+.Hotspot:hover {
+  background: $secondary-color;
+}
+
+.Hotspot:hover .HotspotAnnotation {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Active class for showing hotspot info on click */
+.HotspotAnnotation.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Text styles */
+p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Hidden hotspot annotations when not visible */
+.Hotspot:not([data-visible]) > * {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-50% + 4px));
+}
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  background-color: $primary-color;
+}
+
+.progress-bar.hide {
+  display: none;
+}
+
+model-viewer > #ar-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  display: none;
+}

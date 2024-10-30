@@ -1,13 +1,26 @@
-// Handles loading the events for <model-viewer>'s slotted progress bar
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-  if (event.detail.totalProgress === 1) {
-    progressBar.classList.add('hide');
-    event.target.removeEventListener('progress', onProgress);
-  } else {
-    progressBar.classList.remove('hide');
-  }
-};
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+console.log("IIFE Fired");
+// Variables
+const hotspots = document.querySelectorAll('.Hotspot'); 
+
+// Toggle hotspot info visibility when clicked
+hotspots.forEach(hotspot => {
+  hotspot.addEventListener('click', (event) => {
+    const annotation = hotspot.querySelector('.HotspotAnnotation');
+    
+    // Toggle 'active' class to show/hide on click
+    annotation.classList.toggle('active');
+    
+    // Stop the event from bubbling up to document
+    event.stopPropagation();
+  });
+});
+
+// Close hotspot info when clicking outside
+document.addEventListener('click', () => {
+  hotspots.forEach(hotspot => {
+    const annotation = hotspot.querySelector('.HotspotAnnotation');
+    if (annotation) {
+      annotation.classList.remove('active'); // Hide info when clicking outside
+    }
+  });
+});
