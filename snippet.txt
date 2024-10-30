@@ -1,0 +1,20 @@
+<model-viewer src="earbuds_hspot.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1.19" camera-orbit="-167.7deg 77.34deg 2.191m" field-of-view="30deg">
+    <button class="Hotspot" slot="hotspot-1" data-position="1.1716265981711977m 0.4241332470823146m -0.00445245906883418m" data-normal="-0.4817538003905118m 0m -0.8763066106159985m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Aluminum</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="1.2153916993660385m 0.13689296401740708m -0.0816964087060955m" data-normal="-0.9870445466849294m -1.2087809974590524e-16m 0.16044644857254498m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Speaker</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="1.1350577286357555m -0.082297095840839m 0.02376905043491248m" data-normal="-0.07407803340878032m 0.039029762140875834m -0.996488395634146m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Crystal</div>
+    </button><button class="Hotspot" slot="hotspot-6" data-position="1.1874191194470907m 0.8448839166921971m -0.08484427956320209m" data-normal="0m -1m 0m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Charging Contact</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
