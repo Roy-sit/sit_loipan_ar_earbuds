@@ -1,6 +1,6 @@
 @import 'variables';
 
-/* General reset */
+// General reset
 :not(:defined) > * {
   display: none;
 }
@@ -11,41 +11,248 @@ html, body {
   padding: 0;
 }
 
-model-viewer {
-  width: 100%;
-  height: 90%;
-  background-color: white;
+body {
+    overflow-x: hidden;
 }
 
-/* Hotspot box */
+// Name Logo
+#logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo object {
+  width: 150px; 
+  height: auto;   
+  margin-bottom: 10px;
+  margin-top: 10px; 
+}
+
+
+/* Style for menu */
+#logo ul {
+  display: flex;           
+  gap: 40px;    
+  letter-spacing: 5px;            
+  list-style-type: none;    
+  padding: 0;
+  margin: 10px 0 0; 
+}
+
+
+#logo ul li a {
+  text-decoration: none;   
+  color: black;  
+  font-size: 11px;            
+  font-weight: 600;  
+  background-size: cover;       
+}
+
+#logo ul li a:hover {
+  color: #FF6C00;           
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100%;
+}
+
+
+// Background video
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: blur(190px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+// Hero-video
+.play-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.play-button {
+  display: flex;
+  background: rgba(255, 71, 4, 0.6);
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  width: 60px;
+  height: 68px;
+  cursor: pointer;
+  color: white;
+  justify-content: center;  
+  align-items: center;     
+  z-index: 10;              
+}
+
+.play-button:hover {
+  background: rgba(157, 6, 195, 0.8);
+}
+
+
+#hero-video {
+  grid-column: 1/-1;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.big-text {
+  margin-top: 80px;
+  margin-left: 17px;
+  font-size: 20px;
+  letter-spacing: 7px;
+  word-spacing: 10px;
+  font-weight: 600;
+  color: $primary-color; 
+}
+
+
+// x-ray view
+#mobile-tablet-view {
+margin: 80px 15px 15px 15px;
+}
+
+#xray {
+  position: relative;
+  aspect-ratio: 12/7;
+  background-image: url(../images/xray.jpg);
+  background-size: cover;
+  width: 80%;
+}
+
+#divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/earbuds_org.jpg);
+  background-size: cover;
+  height: 100%;
+  width:43%;
+}
+
+
+// Promotional images
+#promo_image {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 80px;
+  padding-bottom: 70px;
+  
+}
+
+#promo_image img {
+  width: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+
+// /* Container for images */
+#lightbox {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+
+#promo-3 {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  max-width: 95%; 
+  margin: 0 auto; 
+  overflow: hidden;
+}
+
+#promo-3 img {
+  transition: transform 0.3s ease; 
+}
+
+
+
+
+// Earbuds exploration
+.content p {
+  font-size: 12px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  text-align: center;
+}
+
+
+
+#earbuds_frame {        
+  max-width: 100%;  
+}
+
+
+
+// Hotspot dots
 .Hotspot {
   background: white;
-  border-radius: 32px;
+  border-radius: 10px;
   border: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   cursor: pointer;
-  height: 20px;
   padding: 8px;
   position: relative;
   transition: opacity 0.3s;
-  width: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .Hotspot:not([data-visible]) {
   background: transparent;
   border: 4px solid white;
   box-shadow: none;
-  height: 28px;
   pointer-events: none;
-  width: 28px;
 }
 
 .Hotspot:focus {
   border: 4px solid $secondary-color;
-  height: 28px;
+  height: 20px;
   outline: none;
-  width: 28px;
+  width: 10px;
 }
 
 .Hotspot > * {
@@ -54,20 +261,21 @@ model-viewer {
   transition: opacity 0.3s, transform 0.3s;
 }
 
-/* Hotspot info */
+/* Hotspot box and info */
 .HotspotAnnotation {
-  background: white;
+  background: rgb(255, 255, 255);
   width: 130px;
+  height: 200px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   color: $primary-color;
-  font-size: 17px;
+  font-size: 13px;
   text-align: left;
   font-weight: 800;
   padding: 8px 16px;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 60px;
+  left: 50px;
   transform: translateY(-50%);
   visibility: hidden; 
   opacity: 0;
@@ -95,8 +303,8 @@ model-viewer {
 }
 
 /* Text styles */
-p {
-  font-size: 13px;
+.p {
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -107,25 +315,38 @@ p {
   transform: translateY(calc(-50% + 4px));
 }
 
-.progress-bar {
-  display: block;
-  width: 40px;
-  height: 10px;
-  position: absolute;
-  left: 30px;
-  top: 30px;
-  transform: translate(-50%, -50%);
-  border-radius: 25px;
-  background-color: $primary-color;
+model-viewer {
+  margin-top: 100px;
+  width: 70%;
+  height: 50%;
+  background-color: transparent;
 }
 
-.progress-bar.hide {
-  display: none;
+.final-par {
+  position: flex;
+  margin-top: 150px;
+  padding: 80px 40px 80px 40px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  color: $primary-color;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Optional background for readability */
+  border-radius: 10px;
 }
 
-model-viewer > #ar-prompt {
-  position: absolute;
-  left: 30px;
-  bottom: 50px;
-  display: none;
+#sticky-footer {
+  margin-top: 300px;
+  padding-bottom: 110px;
+  padding-top: 20px;
+ text-align: center;
+ font-size: 10px;
+ letter-spacing: 7px;
+ background-color: rgba(255, 255, 255, 0.6)
+}
+
+#media_icon a i {
+  margin-top: 40px;
+  font-size: 20px;
 }

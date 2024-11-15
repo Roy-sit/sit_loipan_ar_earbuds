@@ -1,1 +1,230 @@
 @import 'variables';
+
+html {
+  /* max-width: 1200px; */
+  margin: auto;
+}
+
+
+/* mobile */
+@media screen and (min-width: 412px) {
+
+  #promo_image {
+    flex-direction: column; 
+}
+
+  #promo_image img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+}
+
+
+/* tablet */
+#comparison-con {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  #logo object {
+    width: 200px; 
+    height: auto;   
+    margin-bottom: 20px;
+    margin-top: 20px; 
+  }
+
+  #logo ul {
+    gap: 60px;    
+    letter-spacing: 7px;  
+  }
+
+  #logo ul li a {
+    text-decoration: none;   
+    color: black;  
+    font-size: 14px;            
+    font-weight: 600;         
+  }
+
+  #hero-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .big-text {
+    margin-bottom: 150px;
+    margin-top: 150px;
+    margin-left: 35px;
+    letter-spacing: 13px;
+    word-spacing: 18px;
+    font-size: 30px;
+  }
+
+  
+// X-ray view
+#mobile-tablet-view {
+  display: none;
+}
+
+#comparison-con {
+  display: flex;
+  scale: 130%;
+  margin-left: 200px;
+  margin-top: 90px;
+  margin-bottom: 190px;
+}
+
+.xray-bar {
+  position: absolute;  /* over the image */
+  bottom: 10px; 
+  width: 35%;  
+  height: 5px;  
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px; 
+  left: 40%; 
+  transform: translateX(-50%); 
+}
+
+
+// Promotional image section
+#promo_image {
+  flex-direction: row;  
+  justify-content: space-between;  
+  margin-top: -120px;
+}
+
+#promo_image img {
+  width: 49%;
+}
+
+#promo-3 {
+  margin-top: 30px;
+}
+
+// Earbuds exploration
+.content p {
+  font-size: 15px;
+  margin-top: -120px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  margin-bottom: 10px;
+}
+
+#earbuds_frame {
+  max-width: 100%;
+  margin-bottom: 100px;
+  margin-top: 90px;
+}
+
+// Hotspot view section
+model-viewer {
+  margin-top: 100px;
+  margin-left: 80px;
+  width: 60%;
+  height: 60%;
+  background-color: transparent;
+}
+
+.final-par {
+  font-size: 15px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#sticky-footer {
+ font-size: 11px;
+ letter-spacing: 9px;
+}
+
+#media_icon a i {
+  margin-top: 50px;
+  font-size: 23px;
+}
+}
+
+
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+  #logo {
+    justify-self: center;
+    margin-top: 40px;
+    object {
+      width: 250px;
+    }
+  }
+
+  #hero-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 130px;
+    max-width: 80%;
+  }
+
+  .big-text {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-left: 35px;
+    font-size: 30px;
+  }
+
+  #promo_image {
+    flex-direction: row;  
+    justify-content: space-between;  
+    margin-top: -40px;
+  }
+  #promo_image img {
+    width: 49%;
+  }
+
+  #promo-3 {
+    scale: 90%;
+  }
+
+  #comparison-con {
+    display: block;
+    scale: 110%;
+    margin-left: 220px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  
+  .xray-bar {
+    position: absolute;  /* over the image */
+    bottom: 10px; 
+    width: 35%;  
+    height: 5px;  
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2px; 
+    left: 40%; 
+    transform: translateX(-50%); 
+  }
+
+  #earbuds_frame {        
+    scale: 85%;
+    margin-top: 80px;
+  }
+
+  model-viewer {
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 70%;
+    height: 70%;
+    background-color: transparent;
+  }
+
+
+  #sticky-footer {
+    margin-top: 470px;
+   text-align: center;
+   letter-spacing: 13px;
+  }
+  }
+
+

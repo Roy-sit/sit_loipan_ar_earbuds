@@ -8,3 +8,14 @@ $body-font-family: 'Galvji', Helvetica, Arial, sans-serif;
 html {
   font-family: 'Galvji', Helvetica, Arial, sans-serif; 
 }
+
+a {
+  color: $secondary-color;
+  &:hover {
+    color: $hover-color; 
+  }
+}
+
+#burger-con ul li a {
+  color: $secondary-color; 
+}
