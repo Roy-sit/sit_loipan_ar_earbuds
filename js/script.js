@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Promotional Images Hover Effect
-  gsap.utils.toArray("#promo_image img").forEach((img) => {
+  gsap.utils.toArray("#promo-image img").forEach((img) => {
     img.addEventListener("mouseenter", () => {
       gsap.to(img, {
         scale: 1.05,
@@ -67,22 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })();
 
-  // Lightbox
-  document.querySelectorAll(".promo-image img").forEach((img) => {
-    img.addEventListener("click", () => openLightbox(img.src));
-  });
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  lightbox.addEventListener("click", closeLightbox);
 
-  function openLightbox(src) {
-    lightboxImg.src = src;
-    lightbox.style.display = "flex";
-  }
 
-  function closeLightbox() {
-    lightbox.style.display = "none";
-  }
+
 
   // Zoom Effect on Promo-3
   const promoImage = document.querySelector("#promo-3");
@@ -106,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to(img, { scale: 1, x: 0, y: 0, duration: 0.3, ease: "power3.out" });
   });
 
+
+  
   // Hotspots and Annotations
   const hotspots = document.querySelectorAll(".Hotspot");
   hotspots.forEach((hotspot) => {
@@ -145,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  gsap.utils.toArray("#mobile-tablet-view, #xray, #promo_image").forEach((image) => {
+  gsap.utils.toArray("#mobile-tablet-view, #xray, #promo-image").forEach((image) => {
     gsap.from(image, {
       scale: 0.8,
       opacity: 0,
@@ -160,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-  // Hotspots Data
+  // Hotspots array
   const hotspotsData = [
     {
       slot: "hotspot-1",

@@ -9,11 +9,11 @@ html {
 /* mobile */
 @media screen and (min-width: 412px) {
 
-  #promo_image {
+  #promo-image {
     flex-direction: column; 
 }
 
-  #promo_image img {
+  #promo-image img {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -89,13 +89,13 @@ html {
 
 
 // Promotional image section
-#promo_image {
+#promo-image {
   flex-direction: row;  
   justify-content: space-between;  
   margin-top: -120px;
 }
 
-#promo_image img {
+#promo-image img {
   width: 49%;
 }
 
@@ -174,12 +174,12 @@ model-viewer {
     font-size: 30px;
   }
 
-  #promo_image {
+  #promo-image {
     flex-direction: row;  
     justify-content: space-between;  
     margin-top: -40px;
   }
-  #promo_image img {
+  #promo-image img {
     width: 49%;
   }
 
