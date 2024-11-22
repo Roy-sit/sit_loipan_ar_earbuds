@@ -148,6 +148,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+
+
+
+// Open Lightbox
+function openLightbox(src) {
+  const lightbox = document.querySelector('#lightbox');
+  const lightboxImage = document.querySelector('#lightbox-image');
+  lightboxImage.src = src; // Set the clicked image's source to the lightbox image
+  lightbox.style.display = 'flex'; // Show the lightbox
+}
+
+// Close Lightbox
+function closeLightbox() {
+  const lightbox = document.querySelector('#lightbox');
+  lightbox.style.display = 'none'; 
+}
+
+// Add Event Listeners to the images
+document.querySelectorAll('.lightbox-trigger').forEach(image => {
+  image.addEventListener('click', () => openLightbox(image.src));
+});
+
+// Add Event Listener to the Close Button
+document.querySelector('#close-lightbox').addEventListener('click', closeLightbox);
+
+
+
+
   
   // Hotspots array
   const hotspotsData = [

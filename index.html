@@ -81,9 +81,16 @@
     </div>
 
     <div id="promo-image">
-        <img src="images/promo_01.jpeg" alt="Image 1">
-        <img src="images/promo_02.jpeg" alt="Image 2">
+        <img class="lightbox-trigger" src="images/promo_01.jpeg" alt="Image 1">
+        <img class="lightbox-trigger" src="images/promo_02.jpeg" alt="Image 2">
     </div>
+    
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <button id="close-lightbox" onclick="closeLightbox()">X</button>
+        <img id="lightbox-image" src="" alt="Lightbox Image">
+      </div>
+
 
     <div id="promo-3">
         <img src="images/promo_03.jpg" alt="promotional image 3">
